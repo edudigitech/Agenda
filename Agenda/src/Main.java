@@ -24,6 +24,6 @@ public class Main {
             else if(opcion==4){
                 System.out.println("Has escogido " + fourth);
             }
-
+            // version identica a la anterior
         }
 }
