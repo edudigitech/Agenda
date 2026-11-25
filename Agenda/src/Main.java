@@ -1,29 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
+        String[] options = {"1 Añadir contacto", "2 Mostrar contactos", "3 Buscar contacto", "4 Salir"};
+        int i=0;
 
-            String first = "1 Añadir contacto";
-            String second = "2 Mostrar contactos";
-            String third = "3 Buscar contacto";
-            String fourth = "4 Salir";
-            System.out.println("Seleccione\n" + first + "\n" + second + "\n" + third +"\n" + fourth);
-
-            int opcion= sc.nextInt();
-            if(opcion==1){
-                System.out.println("Has escogido " + first);
+        while(i!=4) {
+            for (String list : options) {
+                System.out.println(list);
             }
-            else if(opcion==2){
-                System.out.println("Has escogido " + second);
-            }
-            else if(opcion==3){
-                System.out.println("Has escogido " + third);
-            }
-            else if(opcion==4){
-                System.out.println("Has escogido " + fourth);
-            }
-            // version identica a la anterior
+            int choice = sc.nextInt();
+            System.out.println("Has escogido " + options[choice - 1]);
+            i=choice;
         }
+    }
 }
